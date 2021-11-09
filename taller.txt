@@ -1,0 +1,507 @@
+// punto 1
+
+import java.util.Scanner;
+
+
+public class punto_01 {
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("ingrese la cantidad de datos que tendra el array");    
+        int cantidadNumeros = sc.nextInt();
+        sc.nextLine();
+        int cantidadPositivos = 0;
+        int cantidadNegativos = 0;
+        int cantidadCeros = 0;
+       
+        
+        Integer[] numeros = new Integer[cantidadNumeros];
+        
+        for(int i = 0; i < numeros.length; i++) {
+            
+            System.out.println("ingrese un numero en la posicion " + i + " del array");
+            numeros[i] = sc.nextInt();
+            sc.nextLine();
+            
+        }
+        
+        for(int i = 0; i <= (numeros.length - 1); i++) {
+            
+            if(numeros[i] > 0 ){
+                cantidadPositivos ++;
+            } else {
+                cantidadNegativos ++;
+            }
+            
+            if(numeros[i] == 0 ) {
+                cantidadCeros ++;
+            }
+            
+        }
+        
+        System.out.println("la cantidad de positivos son: " + cantidadPositivos);
+        System.out.println("la cantidad de negativos son: " + cantidadNegativos);
+        System.out.println("la cantidad de ceros son: " + cantidadCeros);
+        
+        
+        
+        
+    }
+    
+    
+}
+
+// punto 2
+
+import java.util.Scanner;
+
+
+public class punto_02 {
+    
+    public static void main(String[] args) {
+        
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("ingrese la cantidad de datos que tendra el array");    
+        int cantidadNumeros = sc.nextInt();
+        sc.nextLine();
+        int cantidadPares = 0;
+        int cantidadInpares = 0;
+        
+        Integer[] numeros = new Integer[cantidadNumeros];
+        
+        for(int i = 0; i < numeros.length; i++) {
+            
+            System.out.println("ingrese un numero en la posicion " + i + " del array");
+            numeros[i] = sc.nextInt();
+            sc.nextLine();
+            
+        }
+        
+        
+        
+    }
+    
+}
+
+// punto 3
+
+import java.util.Scanner;
+
+
+public class punto_03 {
+    
+    public static void main(String[] args) {
+        
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("ingrese la cantidad de datos que tendra el array 1");    
+        int cantidadNumeros = sc.nextInt();
+        sc.nextLine();
+        int cantidadPares = 0;
+        int cantidadInpares = 0;
+        
+        Integer[] numeros = new Integer[cantidadNumeros];
+        Integer[] numerosInvertidos = new Integer[cantidadNumeros];
+        
+        for(int i = 0; i < numeros.length; i++) {
+            
+            System.out.println("ingrese un numero en la posicion " + i + " del array");
+            numeros[i] = sc.nextInt();
+            sc.nextLine();
+            
+        }
+        
+        for(int i = 0; i <= (numeros.length - 1); i ++){
+            
+            int limite = (numerosInvertidos.length - 1) - i;
+            numerosInvertidos[limite] = numeros[i];
+            
+        }
+        
+        for(int i = 0 ; i <= (numeros.length - 1); i++){
+            System.out.println("el array 1 es " + numeros[i]);
+        }
+        
+        for(int i = 0 ; i <= (numerosInvertidos.length - 1); i++){
+            System.out.println("el array 2 invertido es " + numerosInvertidos[i]);
+        }
+        
+        
+    }
+    
+    
+    
+}
+
+// punto 4
+
+import java.util.*;
+
+
+public class punto_04 {
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int cantidad = 0;
+
+        System.out.println("ingrese la cantidad de numeros primos a averiguar: ");
+        cantidad = sc.nextInt();
+        
+        sc.nextLine();
+        
+        Integer[] primos = new Integer[cantidad];
+        List<Integer> listaPrimos = new ArrayList<Integer>();
+        
+        for(int i = 1; listaPrimos.size() < cantidad; i++) {
+            
+            int divisibles = 0;
+            
+            for(int j = 1; j <= i ; j++){
+                
+                if(i % j == 0){
+                    divisibles ++;
+                }
+                
+            }
+            
+            if (divisibles == 2){
+                
+                
+                listaPrimos.add(i);
+
+            }
+            
+        }
+        
+        System.out.println("----");
+
+        for(int i = 0; i < listaPrimos.size(); i ++) {
+            
+            primos[i] = listaPrimos.get(i);
+            System.out.println(primos[i]);
+            
+        }
+        
+        
+        
+    }
+    
+    
+}
+
+// punto 5
+
+import java.util.Scanner;
+
+
+public class punto_05 {
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int cantidad = 0;
+
+        System.out.println("ingrese la cantidad de numeros a ingresar: ");
+        cantidad = sc.nextInt();
+        
+        sc.nextLine();
+        
+        Integer[] primos = new Integer[cantidad];
+        
+        for(int i = 0; i < primos.length; i ++){
+            System.out.println("ingrese el dato " + i + " del array: " );
+            primos[i] = sc.nextInt();
+            
+            sc.nextLine();
+            
+        }
+        
+        
+        
+        for(int i = 0; i < primos.length; i++) {
+            
+            int divisibles = 0;
+            
+            for(int j = 1; j <= primos[i] ; j++){
+                
+                if(primos[i] % j == 0){
+                    divisibles ++;
+                }
+                
+            }
+            
+            if (divisibles == 2){
+                
+                System.out.println( primos[i] + " es primo");
+
+            }
+            
+        }
+        
+        
+        
+    }
+    
+}
+
+// punto 6
+
+import java.util.*;
+
+public class punto_06 {
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int cantidad = 0;
+
+        
+        System.out.println("ingrese la cantidad de numeros a ingresar: ");
+        cantidad = sc.nextInt();
+        
+        sc.nextLine();
+        
+        Integer[] numeros = new Integer[cantidad];
+        
+        for(int i = 0; i < numeros.length; i++){
+            System.out.println("ingrese el dato " + i );
+            numeros[i] = sc.nextInt();
+            
+            sc.nextLine();
+        }
+        
+        Arrays.sort(numeros);
+        
+        System.out.println("-----");
+        
+        for(int n: numeros) {
+            System.out.println(n);
+        }
+        
+        
+    }
+    
+    
+}
+
+// punto 7
+
+import java.util.*;
+
+public class punto_07 {
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int notas = 0;
+        
+        System.out.println("cuantas notas desea ingresar?");
+        notas = sc.nextInt();
+        
+        sc.nextLine();
+        
+        Double[] listaNotas = new Double[notas];
+        
+        for (int i = 0; i < listaNotas.length; i++) {
+            
+            System.out.println("ingrese la nota " + i );
+            listaNotas[i] = sc.nextDouble();
+            
+        }
+        
+        Arrays.sort(listaNotas);
+        
+        System.out.println("la nota mayor es " + listaNotas[notas - 1]);
+        System.out.println("la nota menor es " + listaNotas[0]);
+        
+        
+        
+    }
+    
+}
+
+// punto 8
+
+import java.util.*;
+
+public class punto_08 {
+    
+    public static void main(String[] args) {
+        
+        
+        Scanner sc = new Scanner(System.in);
+        int cantidad = 0;
+        
+        System.out.println("ingrese la cantidad de datos para el array?");
+        cantidad = sc.nextInt();
+        
+        sc.nextLine();
+        
+        Integer[] listaNotas = new Integer[cantidad];
+        
+        for (int M = 0; M < listaNotas.length; M++) {
+            
+            System.out.println("ingrese el dato " + M );
+            listaNotas[M] = sc.nextInt();
+            
+        }
+        
+        Arrays.sort(listaNotas);
+        List listaNumeros =  Arrays.asList(listaNotas);
+        Set<Integer> lista = new HashSet<Integer>(listaNumeros);
+        
+        for(int n: lista) {
+            System.out.println("el numero " + n + " esta " + Collections.frequency(listaNumeros, n));
+        }
+        
+        
+    }
+    
+}
+
+// punto 9
+
+import java.util.*;
+
+public class punto_09 {
+    
+    public static void main(String[] args) {
+        
+        
+        Scanner sc = new Scanner(System.in);
+        int cantidad = 0;
+        int auxiliar = 0;
+        
+        System.out.println("ingrese el tamaño de los Arrays");
+        cantidad = sc.nextInt();
+        
+        sc.nextLine();
+        
+        Integer[] arrayA = new Integer[cantidad];
+        Integer[] arrayB = new Integer[cantidad];
+        
+        for(int i = 0; i < arrayA.length; i ++) {
+            System.out.println("ingrese el dato " + i + " del array A");
+            arrayA[i] = sc.nextInt();
+        }
+        
+        System.out.println("\n");
+        
+        for(int i = 0; i < arrayB.length; i ++) {
+            System.out.println("ingrese el dato " + i + " del array B");
+            arrayB[i] = sc.nextInt();
+        }
+        
+        
+        for(int i = 0; i < arrayA.length; i++) {
+            auxiliar = arrayA[i];
+            arrayA[i] = arrayB[i];
+            arrayB[i] = auxiliar;
+        }
+        
+        System.out.println("\n-------\n");
+        
+        System.out.println("el array A ahora es: ");
+        for(int n: arrayA) {
+            System.out.println(n);
+        }
+        
+        
+        
+        System.out.println("\n-------\n");
+        
+        System.out.println("el array B ahora es: ");
+        for(int n: arrayB) {
+            System.out.println(n);
+        }
+        
+        
+    }
+    
+}
+
+// punto 10
+
+import java.util.*;
+
+public class punto_10 {
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int cantidadM = 0;
+        int cantidadN = 0;
+        
+        System.out.println("ingrese el tamaño M del arrayA");
+        cantidadM = sc.nextInt();
+        sc.nextLine();
+        
+        
+        System.out.println("ingrese el tamaño N del arrayB");
+        cantidadN = sc.nextInt();
+        sc.nextLine();
+        
+        System.out.println("\n");
+        
+        Integer[] arrayA = new Integer[cantidadM];
+        Integer[] arrayB = new Integer[cantidadN];
+        
+        
+        Integer[] arrayC = new Integer[cantidadN + cantidadM];
+        
+        for(int i = 0; i < arrayA.length; i++){
+            
+            System.out.println("ingrese el dato " + i + " del arrayA");
+            arrayA[i] = sc.nextInt();
+            
+            sc.nextLine();
+            
+        }
+        
+        System.out.println("\n");
+        
+        for(int i = 0; i < arrayB.length; i++){
+            
+            System.out.println("ingrese el dato " + i + " del arrayB");
+            arrayB[i] = sc.nextInt();
+            
+            sc.nextLine();
+            
+        }
+        
+        for(int i = 0; i <= (arrayA.length - 1); i++){
+            
+            arrayC[i] = arrayA[i];
+            
+        }
+        
+        for(int i = 1; i <= (arrayB.length); i++){
+            
+            arrayC[(arrayA.length - 1) + i] = arrayB[i - 1];
+            
+        }
+        
+        
+        
+        System.out.println("\n");
+        
+        
+        System.out.println("el arrayC contiene al arrayA y arrayB:");
+        for(int i: arrayC) {
+            System.out.println(i);
+        }
+        
+        
+        
+    }
+    
+}
+
+
